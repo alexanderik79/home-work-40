@@ -28,20 +28,23 @@ function Request() {
       });
   }, []);
 
+
   return (
+
     <>
+    <h1>Request With useEffect</h1>
       {data ? (
         <div>
-          <h3>{data.name}</h3>
+          <h2>{data.name}</h2>
           <p>{data.description}</p>
-          <p>Цена: ${data.price}</p>
-          <p>Марка: {data.make}</p>
-          <p>Модель: {data.model}</p>
-          <p>Год: {data.year}</p>
-          <img src={data.photos?.[0]} alt={data.name} width={300} />
+          <p>Price: ${data.price}</p>
+          <p>Trade: {data.make}</p>
+          <p>Model: {data.model}</p>
+          <p>Year: {data.year}</p>
+          <img src={data.photoList?.[0]} alt={data.name} width={300} />
         </div>
       ) : (
-        <p>Нет данных</p>
+        <p>Np data</p>
       )}
     </>
   );
