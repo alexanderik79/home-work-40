@@ -13,11 +13,9 @@ function Request() {
     })
       .then((json) => {
         setData(json);
-        setLoading(false);
       })
       .catch((error) => {
         console.error('Ошибка:', error);
-
       });
   }, []);
 
@@ -27,7 +25,7 @@ function Request() {
         <p>Загрузка...</p>
       ) : (
         <div>
-          <h3>{data.title}</h3>
+          <h3>{data.name}</h3>
           <p>{data.body}</p>
         </div>
       )}
