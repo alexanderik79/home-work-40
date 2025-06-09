@@ -4,7 +4,7 @@ function Request() {
   const [data, setData] = useState(null);
 
   const apiKey = '0190ed4a-9d93-4b55-ac50-96123dbc39e6';
-  const productId = 1;
+  const productId = Math.floor(Math.random() * 25) + 1;
   const company = 'AutoPlus';
 
   useEffect(() => {
